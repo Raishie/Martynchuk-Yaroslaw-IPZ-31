@@ -25,14 +25,43 @@ body {
   text-decoration: none;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.head {
+  width: 1170px;
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  margin-bottom: 94px;
+  justify-content: space-between;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  margin-left: 93px;
+}
+
 .nav_list {
   list-style: none;
+  display: flex;
+  margin-left: 0px;
+  padding: 0px;
 }
 
 .nav_item {
   font-size: 14px;
   color: #000;
   text-decoration: none;
+  margin-right: 50px;
+  font-weight: 500;
+}
+
+.nav_item--active {
+  color: #2196f3;
 }
 
 .nav_item:hover {
@@ -42,11 +71,15 @@ body {
 .contacts {
   list-style: none;
   font-size: 14px;
+  display: flex;
+  padding: 0%;
+  margin-left: 264px;
 }
 
 .contacts_items {
   color: #757575;
   text-decoration: none;
+  margin-left: 40px;
 }
 
 .contacts_items:hover {
@@ -61,6 +94,7 @@ body {
   color: #fff;
   font-size: 44px;
   text-transform: uppercase;
+  align-items: center;
 }
 
 .order {
@@ -146,4 +180,178 @@ body {
   font-style: normal;
   font-size: 14px;
   text-decoration: none;
+}
+
+.buttons_items {
+  margin-right: 8px;
+}
+
+.main_section {
+  width: 1170px;
+
+  margin: 0 auto;
+}
+
+.buttons {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.buttons_list {
+  border: 0;
+  width: 67px;
+  height: 38px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  transition: 0.1s;
+
+  color: #212121;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.48px;
+}
+
+.buttons_list_1 {
+  border: 0;
+  width: 125px;
+  height: 38px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  transition: 0.1s;
+
+  color: #212121;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.48px;
+}
+
+.buttons_list_2 {
+  border: 0;
+  width: 112px;
+  height: 38px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  transition: 0.1s;
+
+  color: #212121;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.48px;
+}
+
+.buttons_list_3 {
+  border: 0;
+  width: 103px;
+  height: 38px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  transition: 0.1s;
+
+  color: #212121;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.48px;
+}
+
+.buttons_list_4 {
+  border: 0;
+  width: 130px;
+  height: 38px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  transition: 0.1s;
+
+  color: #212121;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.48px;
+}
+
+.buttons_list:hover {
+  background: #2196f3;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+
+  color: #fff;
+}
+
+.buttons_list_1:hover {
+  background: #2196f3;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+
+  color: #fff;
+}
+
+.buttons_list_2:hover {
+  background: #2196f3;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+
+  color: #fff;
+}
+
+.buttons_list_3:hover {
+  background: #2196f3;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+
+  color: #fff;
+}
+
+.buttons_list_4:hover {
+  background: #2196f3;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+
+  color: #fff;
+}
+
+.my_projects {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 94px;
+}
+
+.link1 {
+  text-decoration: none;
+}
+
+.element {
+  width: 370px;
+  height: 404px;
+  border: 1px solid #eee;
+  background-color: #fff;
+}
+
+.name_project {
+  color: #212121;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 36px; /* 200% */
+  letter-spacing: 1.08px;
+}
+
+.development {
+  color: #757575;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px; /* 187.5% */
+  letter-spacing: 0.48px;
 }

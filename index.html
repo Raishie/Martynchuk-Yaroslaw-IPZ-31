@@ -11,10 +11,10 @@
     <header class="header">
       <div class="container">
         <div class="header-line">
+          <a class="logotype" href="./index.html" lang="en"
+            ><span class="logotype-span">Web</span>Studio</a
+          >
           <nav class="navigation">
-            <a class="logotype" href="./index.html" lang="en"
-              ><span class="logotype-span">Web</span>Studio</a
-            >
             <ul class="navigation-link">
               <li>
                 <a class="link link--active" href="./index.html">Студія</a>
@@ -37,45 +37,40 @@
       </div>
     </header>
     <section class="solution">
-      <h1>
-        Ефективні рішення для <br />
-        вашого бізнесу
-      </h1>
+      <h1>Ефективні рішення для вашого бізнесу</h1>
       <button class="main-button" type="button">Замовити послугу</button>
     </section>
-    <section class="advantages">
+    <section class="advantages up">
       <div class="container">
-        <div class="section bottom-section">
-          <ul class="advantages-list">
-            <li class="advantages-items">
-              <h3>Увага до деталей</h3>
-              <p class="desription-list">
-                Ідейні міркування, і навіть початок повсякденної роботи з
-                формування позиції.
-              </p>
-            </li>
-            <li class="advantages-items">
-              <h3>Пунктуальність</h3>
-              <p class="desription-list">
-                Завдання організації, особливо рамки і місце навчання кадрів
-                тягне у себе.
-              </p>
-            </li>
-            <li class="advantages-items">
-              <h3>Планування</h3>
-              <p class="desription-list">
-                Так само консультація з широким активом значною мірою зумовлює.
-              </p>
-            </li>
-            <li class="advantages-items">
-              <h3>Сучасні технології</h3>
-              <p class="desription-list">
-                Значимість цих проблем настільки очевидна, що реалізація
-                планових завдань.
-              </p>
-            </li>
-          </ul>
-        </div>
+        <ul class="advantages-list">
+          <li class="advantages-items">
+            <h3>Увага до деталей</h3>
+            <p class="desription-list">
+              Ідейні міркування, і навіть початок повсякденної роботи з
+              формування позиції.
+            </p>
+          </li>
+          <li class="advantages-items">
+            <h3>Пунктуальність</h3>
+            <p class="desription-list">
+              Завдання організації, особливо рамки і місце навчання кадрів тягне
+              у себе.
+            </p>
+          </li>
+          <li class="advantages-items">
+            <h3>Планування</h3>
+            <p class="desription-list">
+              Так само консультація з широким активом значною мірою зумовлює.
+            </p>
+          </li>
+          <li class="advantages-items">
+            <h3>Сучасні технології</h3>
+            <p class="desription-list">
+              Значимість цих проблем настільки очевидна, що реалізація планових
+              завдань.
+            </p>
+          </li>
+        </ul>
       </div>
     </section>
     <section class="about-us">
@@ -119,8 +114,10 @@
                 alt="чоловік Ігор усміхається"
                 width="270"
               />
-              <h3>Ігор Дем'яненко</h3>
-              <p lang="en">Product Designer</p>
+              <div class="people-card__text">
+                <h3>Ігор Дем'яненко</h3>
+                <p lang="en">Product Designer</p>
+              </div>
             </li>
             <li class="people-card">
               <img
@@ -128,8 +125,10 @@
                 alt="дівчина Ольга усміхається"
                 width="270"
               />
-              <h3>Ольга Рєпіна</h3>
-              <p lang="en">Frontend Developer</p>
+              <div class="people-card__text">
+                <h3>Ольга Рєпіна</h3>
+                <p lang="en">Frontend Developer</p>
+              </div>
             </li>
             <li class="people-card">
               <img
@@ -137,8 +136,10 @@
                 alt="чоловік Микола усміхається"
                 width="270"
               />
-              <h3>Микола Тарасов</h3>
-              <p lang="en">Marketing</p>
+              <div class="people-card__text">
+                <h3>Микола Тарасов</h3>
+                <p lang="en">Marketing</p>
+              </div>
             </li>
             <li class="people-card">
               <img
@@ -146,8 +147,10 @@
                 alt="чоловік Михайло усміхається "
                 width="270"
               />
-              <h3>Михайло Єрмаков</h3>
-              <p lang="en">UI Designer</p>
+              <div class="people-card__text">
+                <h3>Михайло Єрмаков</h3>
+                <p lang="en">UI Designer</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -159,11 +162,7 @@
           ><span class="logotype-span">Web</span>Studio</a
         >
         <address class="footer-address">
-          <div class="footer-address">
-            <a target="blank" href="https://maps.app.goo.gl/UUuDZ8BtZKW6yukz5">
-              м. Київ, пр-т Лесі Українки, 26
-            </a>
-          </div>
+          <p>м. Київ, пр-т Лесі Українки, 26</p>
 
           <div class="footer-mail">
             <a href="mailto:info@devstudio.com">info@devstudio.com</a>

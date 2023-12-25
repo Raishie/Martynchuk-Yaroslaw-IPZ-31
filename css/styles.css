@@ -9,9 +9,8 @@
   --color-milk-white: #f5f4fa;
   --color-black: #000;
   --color-primary-light: #afb1b8;
+  --color-blue-hover: #188ce8;
 }
-
-/* color: var(--color-active-blue); */
 
 /* base */
 body {
@@ -19,6 +18,11 @@ body {
   color: #000;
   font-style: normal;
   font-weight: 400;
+}
+
+body ::before,
+::after {
+  box-sizing: border-box;
 }
 
 ul {
@@ -445,16 +449,17 @@ section.up {
 
 .footer {
   background-color: var(--color-background-gray);
-  padding: 60px 0px;
+  padding: 60px 0;
 }
 
 .footer-group {
   display: flex;
-  gap: 94px;
+  justify-content: space-between;
+  align-items: baseline;
+  /* gap: 94px; */
 }
 
 .footer-address {
-  margin-top: 28px;
   display: flex;
   flex-direction: column;
   row-gap: 12px;
@@ -464,6 +469,7 @@ section.up {
   color: var(--color-white);
   font-style: normal;
   margin: 0;
+  margin-top: 16px;
 }
 
 .footer-mail__link {
@@ -521,6 +527,63 @@ section.up {
   letter-spacing: 0.42px;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+
+.footer__mail-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  background: var(--color-active-blue);
+  border: 1px solid var(--color-active-blue);
+  padding: 10px 28px;
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 187.5%;
+  letter-spacing: 0.96px;
+  cursor: pointer;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer__mail-button:hover,
+.footer__mail-button:focus {
+  background-color: var(--color-blue-hover);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.footer__mail-title {
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer__mail-input {
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(33, 150, 243, 0);
+
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0.48px;
+  padding: 15px 16px;
+  width: 358px;
+  margin-right: 12px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer__mail-input {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.footer__mail-icon {
+  fill: var(--color-white);
 }
 
 /* portfolio buttons */
@@ -816,7 +879,6 @@ section.up {
 }
 
 /* modal window */
-/* Modal */
 .modal-window {
   z-index: 3;
   display: flex;
@@ -833,34 +895,155 @@ section.up {
 
 .modal__content {
   z-index: 4;
-  width: 528px;
-  height: 581px;
+  width: 100%;
+  max-width: 528px;
+  max-height: 581px;
   border-radius: 4px;
   background: var(--color-white);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  transform: scale(0.8);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
+}
+
+.modal__header {
+  color: var(--color-basic-text-black);
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.modal__label {
   position: relative;
+  display: block;
+  margin-bottom: 4px;
+  color: var(--color-text-grey);
+  font-size: 12px;
+  letter-spacing: 0.12px;
+}
+
+.container__input {
+  position: relative;
+}
+
+.modal__icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+}
+
+.modal__input:focus ~ .modal__icon {
+  color: var(--color-active-blue);
+}
+
+.modal__input {
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  max-width: 480px;
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+}
+
+.modal__input:focus {
+  border-color: var(--color-active-blue);
+}
+
+.modal__comment {
+  resize: none;
+  width: 93%;
+  height: 120px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  padding: 12px 16px;
+
+  color: var(--color-basic-text-black);
+  font-size: 12px;
+  letter-spacing: 0.12px;
+}
+
+.modal__comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal__comment:focus {
+  border-color: var(--color-active-blue);
+}
+
+.modal__agree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8.38px;
+}
+
+.modal__agree-text {
+  color: var(--color-text-grey);
+  line-height: 171.429%;
+  letter-spacing: 0.42px;
+}
+
+.modal__contract {
+  color: var(--color-active-blue);
+  text-decoration: underline;
+}
+
+.modal__check__active {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 15px;
+  display: none;
+}
+
+.custom__check {
+  position: relative;
+  border: 2px solid var(--color-basic-text-black);
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+}
+
+.modal__check:checked + .custom__check > .modal__check__active {
+  display: block;
+}
+
+.modal__check:checked + .custom__check {
+  border-color: #fff;
+}
+
+.modal__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.modal__window:not(.is__hidden) .modal__content {
+  transform: scale(1);
 }
 
 .close__button {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: absolute;
+  top: 8px;
+  right: 8px;
   border: 1px solid;
   border-radius: 50%;
   border-color: rgba(0, 0, 0, 0.1);
-  background-color: var(--color-white);
+  background-color: #fff;
   padding: 6px;
   max-width: 30px;
   max-height: 30px;
-  top: 8px;
-  right: 8px;
-}
-
-.modal-window:not(.is__hidden) .modal__content {
-  transform: scale(1);
+  cursor: pointer;
 }
 
 .close__button:hover,
@@ -868,10 +1051,40 @@ section.up {
   fill: var(--color-active-blue);
 }
 
+.modal__button {
+  border-radius: 4px;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 187.5%;
+  letter-spacing: 0.96px;
+  padding: 10px 52px;
+  border: 0;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.modal__group {
+  text-align: center;
+}
+
+.visually__hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
 .is__hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

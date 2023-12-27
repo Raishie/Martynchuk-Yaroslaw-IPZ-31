@@ -25,6 +25,19 @@ body ::before,
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -94,16 +107,6 @@ section.up {
   margin-right: 93px;
 }
 
-.logotype-footer {
-  color: var(--color-white);
-  font-family: Raleway;
-  font-size: 26px;
-  text-decoration: none;
-  font-weight: 700;
-  letter-spacing: 0.78px;
-  font-style: normal;
-}
-
 .logotype-span {
   color: var(--color-active-blue);
   font-family: Raleway;
@@ -127,8 +130,14 @@ section.up {
 .link:hover {
   color: var(--color-active-blue);
 }
+.link:focus {
+  color: var(--color-active-blue);
+}
 
 .navigation .link:hover::after {
+  background: var(--color-active-blue);
+}
+.navigation .link:focus::after {
   background: var(--color-active-blue);
 }
 
@@ -234,6 +243,10 @@ section.up {
 .main-button:hover {
   background: #188ce8;
 }
+
+.main__button:focus {
+  background-color: #188ce8;
+}
 /* advantages section */
 .advantages-list {
   display: flex;
@@ -259,6 +272,7 @@ section.up {
   font-weight: 400;
   letter-spacing: 0.42px;
   margin-bottom: 0px;
+  margin-top: 20px;
 }
 
 .advantages-items__diagrams {
@@ -352,7 +366,7 @@ section.up {
   font-weight: 500;
   letter-spacing: 0.48px;
   margin: 0;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .people-card p {
@@ -361,7 +375,7 @@ section.up {
   font-weight: 400;
   letter-spacing: 0.48px;
   margin: 0;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 /* our team */
@@ -402,8 +416,14 @@ section.up {
 .ourTeam-social__link:hover {
   background-color: var(--color-active-blue);
 }
+.ourTeam-social__link:focus {
+  background-color: var(--color-active-blue);
+}
 
 .ourTeam-social__link:hover .ourTeam-social__icon {
+  fill: var(--color-white);
+}
+.ourTeam-social__link:focus .ourTeam-social__icon {
   fill: var(--color-white);
 }
 
@@ -430,8 +450,14 @@ section.up {
 .customers-items:hover {
   border: 1px solid var(--color-active-blue);
 }
+.customers-items:focus {
+  border: 1px solid var(--color-active-blue);
+}
 
 .customers-items:hover .customers-items__icon {
+  fill: var(--color-active-blue);
+}
+.customers-items:focus .customers-items__icon {
   fill: var(--color-active-blue);
 }
 
@@ -450,26 +476,45 @@ section.up {
 .footer {
   background-color: var(--color-background-gray);
   padding: 60px 0;
+  /* align-items: baseline; */
+}
+
+/* .footer-items {
+  align-items: baseline;
+} */
+
+.logotype-footer {
+  color: var(--color-white);
+  font-family: Raleway;
+  font-size: 26px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.78px;
+  font-style: normal;
 }
 
 .footer-group {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  /* gap: 94px; */
 }
 
 .footer-address {
+  margin-top: 28px;
   display: flex;
   flex-direction: column;
-  row-gap: 12px;
+  /* row-gap: 12px; */
 }
 
 .footer-address p {
+  font-size: 14px;
   color: var(--color-white);
   font-style: normal;
   margin: 0;
-  margin-top: 16px;
+}
+
+.footer-items {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-mail__link {
@@ -479,6 +524,7 @@ section.up {
   text-decoration: none;
   font-style: normal;
   margin: 0;
+  margin-top: 12px;
 }
 
 .footer-mail a {
@@ -489,6 +535,10 @@ section.up {
   text-decoration: none;
   font-style: normal;
   display: block;
+}
+
+.social-footer h3 {
+  margin-top: 12px;
 }
 
 .social-footer-btn {
@@ -527,6 +577,9 @@ section.up {
   letter-spacing: 0.42px;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+.footer__mail-title {
+  margin-top: 12px;
 }
 
 .footer__mail-button {
@@ -795,6 +848,9 @@ section.up {
 .element:hover .element-overlay {
   transform: translateY(0);
 }
+.element:focus .element-overlay {
+  transform: translateY(0);
+}
 
 .element-card {
   position: relative;
@@ -842,7 +898,7 @@ section.up {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.48px;
-  margin: 20px 24px;
+  padding: 20px 24px;
 }
 
 /* portfolio buttons */
@@ -872,6 +928,12 @@ section.up {
 }
 
 .buttons_list:hover {
+  background: var(--color-active-blue);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+.buttons_list:focus {
   background: var(--color-active-blue);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
@@ -937,6 +999,7 @@ section.up {
 }
 
 .modal__input:focus ~ .modal__icon {
+  fill: var(--color-active-blue);
   color: var(--color-active-blue);
 }
 
